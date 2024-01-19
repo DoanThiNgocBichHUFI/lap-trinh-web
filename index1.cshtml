@@ -1,0 +1,38 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered w-75 mx-auto">
+            <tr>
+                <th colspan="2" style="text-align:center; color:white;" class="bg-primary">THONG TIN NHAN VIEN</th>
+            </tr>
+            <tr>
+                <td>Ma nhan vien</td>
+                <td>@Model.ID</td>
+            </tr>
+            <tr>
+                <td>Ten nhan vien</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Dia chi</td>
+                <td>@Model.Address</td>
+            </tr>
+            <tr>
+                <td>Anh</td>
+                <td><img src="~/Images/@Model.Hinh" class="w-25 rounded" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
