@@ -1,0 +1,30 @@
+﻿@model bai1.Models.tbl_Deparment
+
+@{
+    ViewBag.Title = "detailDept";
+}
+<p>
+    @Html.ActionLink("Detail", "detailDept")
+</p>
+<h2>detailDept</h2>
+
+<div>
+    <h4>tbl_Deparment</h4>
+	<hr />
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.DeptId)</td>
+            <td>so nhan vien</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.DeptId)</td>
+            <td>@Session["soNV"]</td>
+        </tr>
+
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DeptId }) |
+    @Html.ActionLink("Back to List", "showDepartment")
+</p>
