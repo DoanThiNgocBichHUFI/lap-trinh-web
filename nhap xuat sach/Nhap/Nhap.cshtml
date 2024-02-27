@@ -1,0 +1,55 @@
+﻿@using bai5.Models;
+
+@{
+    Layout = null;
+    var s = ViewData["s"] as Sach;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nhap</title>
+</head>
+<body>
+    <div id="container">
+        <table style="width: 30%;border: 2px solid blue;background-color: cornsilk;margin: auto;">
+            <tr>
+                <td colspan="2" style="text-align: center;background-color: blue;color: white;vertical-align: middle;">
+                    <h2>Dang ky tai khoan</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Ma sach</td>
+                <td>
+                    <input type="text" name="id" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Ten sach</td>
+                <td>
+                    <input type="text" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Gia sach</td>
+                <td>
+                    <input type="number" name="price" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Hinh</td>
+                <td>
+                    <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Nhập">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@using bai5.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OuputBookList</title>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;color: blue;font-weight: bold;">Book list</h2>
+        <table class="table table-bordered mx-auto" style="width: 50%;">
+            <tr style="background-color: blanchedalmond;">
+                <th align="center">Ma sach</th>
+                <th align="center">Ten sach</th>
+                <th align="center">Gia sach</th>
+                <th align="center">Anh bia</th>
+            </tr>
+            @foreach (Sach b in ViewBag.bookList)
+            {
+                <tr>
+                    <td>@b.ID</td>
+                    <td>@b.tenSach</td>
+                    <td>@b.Gia</td>
+                    <td align="center">
+                        <img src="/images/@b.Gia/" width="100px"/>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
