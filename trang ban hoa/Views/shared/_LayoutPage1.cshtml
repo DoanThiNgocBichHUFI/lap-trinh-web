@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <br>
+        <div id="header" class="row bg-light">
+            <div class="col-xs-12 col-md-4">
+                <br>
+                <img src="image_shop/LogoHoa24h.JPG" width="100%">
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <br>
+                <b>TP Ho Chi Minh: </b><br>
+                Dien thoai:
+                Dia chi:
+                Email:
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <br>
+                <b>TD Ha Noi: </b><br>
+                Dien thoai:
+                Dia chi:
+                Email:
+            </div>
+        </div><br>
+        <div id="menu" style="background-color: yellowgreen;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-success">
+                <a class="navbar-brand" href="image_shop/HomeLogo.JPG"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            @Html.ActionLink("Trang chu", "SanPham", "Product")
+                            <!-- <a class="nav-link" href="#">Trang chu <span class="sr-only">(current)</span></a> -->
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Dang ky", "DangKy", "Product")
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dang nhap </a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Disabled</a>
+                        </li> -->
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div><br>
+        <div id="content" class="row">
+            <div class="col-xs-12 col-md-9">
+                @RenderBody()
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-success">Hoa theo chu de</li>
+                    <li class="list-group-item">Hoa sinh nhat</li>
+                    <li class="list-group-item">Hoa khai truong</li>
+                    <li class="list-group-item">Hoa chia buon</li>
+                    <li class="list-group-item">Qua tang</li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-success">Chon theo muc gia
+                    <li class="list-group-item">Muc gia 1</li>
+                    <li class="list-group-item">Muc gia 2</li>
+                    <li class="list-group-item">Muc gia 3</li>
+                    <li class="list-group-item">Muc gia 4</li>
+
+                </ul>
+            </div><br></br>
+
+
+        </div>
+        <div id="footer" class="row" style="background-color: yellowgreen;">
+            <div class="col text-light mt-3 mb-3" style="text-align:center;">
+                Liên hệ: Khoa Công nghệ Thông tin - Trường Đại học Công nghiệp Thực phẩm Tp.HCM Link: fanpage và link: youtube <br />
+                Địa chỉ: 140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Tp.HCM. ĐT: (028).38161673 (ext 136) Mail: kcntt@hufi.edu.vn
+            </div>
+        </div>
+    </div>
+</body>
+</html>

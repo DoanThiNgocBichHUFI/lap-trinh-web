@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+<table style="width: 30%;margin: auto;">
+    <tr>
+        <td colspan="2" style="text-align: center;vertical-align: middle;">
+            <h2>Dang ky tai khoan </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>Full name</td>
+        <td><input type="text" size="20"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" size="30"></td>
+    </tr>
+    <tr>
+        <td>Pass</td>
+        <td><input type="password" size="30" name="pass"></td>
+    </tr>
+
+    <tr>
+        <td>Gender</td>
+        <td>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Nam</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Nu</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>job</td>
+        <td>
+            <form>
+                <!-- <label for="cars">choose job:</label> -->
+                <select id="job" name="job" style="width: 50%;">
+                    <option value="job1">job 1</option>
+                    <option value="job2">job 2</option>
+                    <option value="job3">job 3</option>
+                    <option value="job4">job 4</option>
+                </select>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Dang ky">
+        </td>
+    </tr>
+</table>
+
