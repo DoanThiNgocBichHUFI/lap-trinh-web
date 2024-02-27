@@ -1,0 +1,104 @@
+﻿@model bai1.Models.Information
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index_DataAnnotation</title>
+</head>
+<body>
+    <div>
+        <form role="form">
+            <div class="form-group">
+                <label>Full name</label>
+                @Html.TextBoxFor(model => model.FullName, new
+                    {
+                        @class= "form-control",
+                        placeHolder= "Nhap ten"
+                    })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger"})
+                <p class="help-block">Nhap ho ten day du, captial tung tu</p>
+            </div>
+            <div class="form-group">
+                <label>ID Student</label>
+                @Html.TextBoxFor(model => model.IdStudent,new
+                {
+                    @class = "form-control",
+                    placeHolder= "Nhap MSSV"
+                })
+                @Html.ValidationMessageFor(model => model.IdStudent, "", new { @class = "text-danger"})
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                @Html.TextBoxFor(model => model.Email, new
+                {
+                    @class = "form-control",
+                    placeHolder= "Example@gmail.com"
+                })
+                @Html.ValidationMessageFor(model =>model.Email,"",new{ @class= "text-danger"})
+            </div>
+            <div class="form-group">
+                <label>File Image input</label>
+                @Html.TextBoxFor(model => model.FileImage,new
+                {
+                    @class = "form=control",
+                    type= "file"
+                })
+            </div>
+            <div class="form-group">
+                <label>Note</label>
+                @Html.TextAreaFor(model =>model.Note,new {@class= "form-control"})
+            </div>
+            <div class="form-group">
+                <label>We are know by</label>
+                <div class="checkbox">
+                    <label>We are Known by</label>
+                    <div class="checkbox">
+                        <label>
+                            @Html.CheckBoxFor(model =>model.Check1) Television
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            @Html.CheckBoxFor(model =>model.Check2) Website
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            @Html.CheckBoxFor(model =>model.Check3) Newspaper
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose work study</label><br />
+                    <label>@Html.RadioButtonFor(model =>model.ChooseWorkTime,"1") Morning (2 -4- 6)</label>
+                    <label>@Html.RadioButtonFor(model => model.ChooseWorkTime, "2") Afternoon (2 -4- 6)</label>
+                    <label>@Html.RadioButtonFor(model => model.ChooseWorkTime, "3") Morning (3-5-7)</label>
+                    <label>@Html.RadioButtonFor(model => model.ChooseWorkTime, "4") Afternoon (3-5-7)</label>
+                </div>
+                <div class="form-group">
+                    <label>Selects an course</label>
+                    @Html.DropDownListFor(model => model.SelectCourse, new List<SelectListItem>
+                    {
+                        new SelectListItem {Text = "1. Html CSS Bootrap",Value= "1"},
+                        new SelectListItem{Text= "2. Javascript",Value= "2"},
+                        new SelectListItem{Text= "3. WebForm",Value= "3"},
+                        new SelectListItem{Text= "4. ASP.Net MVC",Value= "4"},
+                        new SelectListItem{Text= "5. Web Services",Value= "5"},
+                    }, "Select an course", new { @class= "form-control"})
+                    @Html.ValidationMessageFor(model =>model.SelectCourse,"",new{ @class = "text-danger"})
+                </div>
+                <button type="submit" class="btn btn-default">Submit Button</button>
+                <button type="reset" class="btn btn-default">Reset Button</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
