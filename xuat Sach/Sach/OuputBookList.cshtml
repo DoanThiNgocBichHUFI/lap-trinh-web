@@ -1,0 +1,70 @@
+﻿@using bai5.Models
+
+@model List<Sach>
+
+@{
+    Layout = null;
+    var s = ViewData["s"] as Sach;
+    if (s == null)
+    {
+        // Hiển thị thông báo lỗi cho người dùng
+        ViewBag.ErrorMessage = "Không tìm thấy thông tin sách.";
+    }
+    else
+    {
+    
+        using (Html.BeginForm("Index", "Sach", FormMethod.Post))
+        {
+            for (int i = 0; i < Model.Count; i++)
+            {
+                @Html.HiddenFor(m => m[i].MaSach)
+                @Html.EditorFor(m => m[i].TenSach)
+                @Html.EditorFor(m => m[i].Gia)
+                @Html.EditorFor(m => m[i].AnhBia)
+            }
+
+            <input type="submit" value="Submit" />
+        }
+    }
+}
+
+<!DOCTYPE html>
+    
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+    <title>OuputBookList</title>
+</head>
+<body>
+    <div>
+        
+       
+        var s = ViewData["s"] as Sach;
+        <h2>Thong tin </h2>
+        <table class="table table-bordered w-75 mx-auto">
+            <tr>
+                <th colspan="2" style="text-align:center;color:white" class="bg-primary">booklist</th>
+            </tr>
+            
+            <tr>
+                <td>Ma sach</td>
+                <td>Ten sach</td>
+                <td>Gia tien </td>
+                <td>Hinh anh</td>
+            </tr>
+            <tr>
+                <td>@s.MaSach</td>
+                <td>@s.TenSach</td>
+                <td>@s.Gia</td>
+                <td>
+                    <img src="/images/@s.AnhBia" class="w-25 rounded" onerror="this.onerror=null; this.src='/images/default.jpg';" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

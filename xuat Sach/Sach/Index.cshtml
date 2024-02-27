@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    { 
+        <div id="container">
+            <table style="width: 30%;background-color: rgb(249, 243, 221);margin: auto;">
+                <tr>
+                    <td colspan="2" style="text-align: center;background-color: cornsilk;vertical-align: middle;">
+                        <h2>Nhap thong tin cua sach</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ma sach</td>
+                    <td>
+                        <input type="text" name="id" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ten sach</td>
+                    <td>
+                        <input type="text" name="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gia sach</td>
+                    <td>
+                        <input type="number" name="price" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hinh</td>
+                    <td>
+                        <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input style="border-radius: 5px;color: whitesmoke; background-color: rgb(20, 20, 142);" type="submit" value="Nhập">
+                    </td>
+                </tr>
+            </table>
+        </div> 
+        }
+</body>
+</html>
