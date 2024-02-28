@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>DangNhap</h2>
+
+<div>
+    <h4 style="text-align:center" class="mt-3">DANG NHAP</h4>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="form-control is-invalid" value="Enter your username" required />
+        <div class="invalid-feedback">Must to enter your username</div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control is-valid" value="Enter your password" />
+        <div class="valid-feedback text-muted">Password include special character!</div>
+    </div>
+    <div class="form-check form-group">
+        <input type="checkbox" id="check" class="form-check-input" />
+        <label for="check" class="form-check-label">Remember Password</label>
+    </div>
+    <div class="form-group">
+        <center><button class="btn btn-primary mx-auto" type="submit">DANG NHAP</button></center>
+    </div>
+</div>

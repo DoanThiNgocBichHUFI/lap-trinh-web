@@ -1,0 +1,53 @@
+﻿@using nhap_tt_Sach.Models
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Input";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@model List<Sach>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+    <title>OuputBookList</title>
+</head>
+<body>
+    <div>
+        <h2>Thông tin </h2>
+        <table class="table table-bordered w-75 mx-auto">
+            <tr>
+                <th colspan="2" style="text-align:center;color:white" class="bg-primary">booklist</th>
+            </tr>
+            <tr>
+                <td>Ma sach</td>
+                <td>Ten sach</td>
+                <td>Gia tien </td>
+                <td>Hinh anh</td>
+            </tr>
+           
+            @foreach (var item in Model)
+            {
+               
+                <tr>
+                    <td>@item.MaSach</td>
+                    <td>@item.TenSach</td>
+                    <td>@item.Gia</td>
+                    <td><img src="@item.AnhBia" class="w-25 rounded" onerror="this.onerror=null; this.src='/images/default.jpg';" /></td>
+                   
+                </tr> 
+            }
+           
+        </table>
+       
+    </div>
+</body>
+</html>

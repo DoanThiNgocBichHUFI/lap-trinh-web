@@ -1,0 +1,48 @@
+﻿
+
+<h2>Input</h2>
+
+<div id="container">
+    @using (Html.BeginForm("OutputBookList", "Sach", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <table style="width: 30%;background-color: rgb(249, 243, 221);margin: auto;">
+            <tr>
+                <td colspan="2" style="text-align: center;background-color: cornsilk;vertical-align: middle;">
+                    <h2>Nhap thong tin cua sach</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Ma sach</td>
+                <td>
+                    <input type="text" name="MaSach" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Ten sach</td>
+                <td>
+                    <input type="text" name="TenSach" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Gia sach</td>
+                <td>
+                    <input type="number" name="Gia" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Hinh</td>
+                <td>
+                    <input type="file" name="AnhBia" id="img" accept=".jpg, .jpeg, .png">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input style="border-radius: 5px;color: whitesmoke; background-color: rgb(20, 20, 142);" type="submit" value="Nhập">
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">Tải file </button></td>
+            </tr>
+        </table>
+    }
+</div>
